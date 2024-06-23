@@ -6,9 +6,8 @@
     <title>Unity WebGL Player | Robot Apocalypse</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-  
-    <canvas id="unity-canvas" width=3584 height=1798 tabindex="-1" style="width: 3584px; height: 1798px; background: url('Build/WebGL-Build.jpg') center / cover"></canvas>
-    <script src="Build/WebGL-Build.loader.js"></script>
+    <canvas id="unity-canvas" width=3584 height=1798 tabindex="-1" style="width: 3584px; height: 1798px; background: url('Build/WebGL-Build-OnScreenControls.jpg') center / cover"></canvas>
+    <script src="Build/WebGL-Build-OnScreenControls.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -26,18 +25,16 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/WebGL-Build.data",
-        frameworkUrl: "Build/WebGL-Build.framework.js",
-        codeUrl: "Build/WebGL-Build.wasm",
+        dataUrl: "Build/WebGL-Build-OnScreenControls.data",
+        frameworkUrl: "Build/WebGL-Build-OnScreenControls.framework.js",
+        codeUrl: "Build/WebGL-Build-OnScreenControls.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Kyle Smith Systems - KYSS",
         productName: "Robot Apocalypse",
-        productVersion: "0.1",
+        productVersion: "0.2",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
-
-
   </body>
 </html>
